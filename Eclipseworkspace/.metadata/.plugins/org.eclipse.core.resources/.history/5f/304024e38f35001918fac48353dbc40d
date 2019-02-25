@@ -1,0 +1,49 @@
+<!doctype html>
+<html >
+  <head>
+    <link rel="stylesheet" href="bootstrap.min.css">
+	 <link rel="stylesheet" href="demo.css">
+	  <link rel="stylesheet" href="tablestyle.css">
+ 	 <script src="bootstrap.min.js"></script>
+  	 <script src="angular.min.js"></script>
+  	 <script type="text/javascript"  src="incidentRecord.js"></script> 
+  	 <script type="text/javascript"  src="jquery.js"></script> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+ 
+  </head>
+  <body>
+  <h3>iTransport 2.0</h3>
+      <h5>Incident Record qq</h5>
+   <div ng-app="ltaApp" ng-controller="ltaController">
+    <div align="right" > Search: <input type="text" class="form-control" placeholder="Search" ng-model="searchIncident"></div>
+    <div style="overflow-x:auto;">
+     <table class="table table-bordered" border="1" width="50%">
+		<tr>
+			<th> <a href="#" ng-click="sortType = 'irid'; sortReverse = !sortReverse"> IRID </a></th>
+			<th> <a href="#" ng-click="sortType = 'type'; sortReverse = !sortReverse"> Type </a></th>
+			<th> <a href="#" ng-click="sortType = 'state'; sortReverse = !sortReverse"> State </a></th>
+			<th> <a href="#" ng-click="sortType = 'zone'; sortReverse = !sortReverse"> Zone </a></th>
+			<th> <a href="#" ng-click="sortType = 'roadname'; sortReverse = !sortReverse"> Road Name </a></th>
+			<th> <a href="#" ng-click="sortType = 'lanes'; sortReverse = !sortReverse"> Lanes </a></th>
+		</tr>
+			<tr ng-repeat="incident in incidentRec | orderBy:sortType:sortReverse | filter:searchIncident">
+				<td>{{incident.irid}}</td>
+				<td>{{incident.type}}</td>
+				<td>{{incident.state}}</td>
+				<td>{{incident.zone}}</td>
+				<td>{{incident.roadname}}</td>
+				<td>{{incident.lanes}}</td>
+			</tr>
+	</table>     
+   </div>
+    </div>
+    
+    <!-- 
+        <embed type="text/html" src="C:/Users/mdevadoss/workspace/DemoPro/html/incidentDisplay.html">  
+    -->
+  </body>
+</html>
+

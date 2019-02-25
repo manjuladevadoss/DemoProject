@@ -1,0 +1,42 @@
+ .bs-example{
+    	margin: 20px;
+    }
+body {
+  background-image: url("loginImg.jpg");
+}
+.content {
+  max-width: 500px;
+  margin: auto;
+  background: #202B53;
+  padding: 10px;
+  margin-top: 20%;
+}
+.btnClass{
+backcolor: #283D76;
+}
+h3 {
+  color: white;
+  font-family: Roboto, Helvetica, sans-serif;
+}
+h5 {
+  color: white;
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+
+label input {
+   margin-right:5px;
+}
+
+
+.chkclass {
+  color: white;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+}
+p{
+  color: white;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+}
+

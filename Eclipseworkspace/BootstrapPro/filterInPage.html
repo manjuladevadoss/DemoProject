@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Table Filter Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="C:/Users/mdevadoss/workspace/BootstrapPro/bootstrap-4.3.0-dist/css/bootstrap.min.css">
+  <script src="C:/Users/mdevadoss/workspace/BootstrapPro/bootstrap-4.3.0-dist/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  </style>
+</head>
+
+<div class="container mt-3">
+  <h2> Filter in the entire page Example </h2>
+  <p>Type anything to Filter </p>  
+ 
+  <br>
+   <p>Type something in the input field to search for a specific text inside the div element with id="myDIV":</p>
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  
+  <br>
+  
+  <div id="myDIV" class="mt-3">
+    <p>I am a paragraph.</p>
+    <div>I am a div element inside div.</div>
+    <button class="btn">I am a button</button>
+    <button class="btn btn-info">Another button</button>
+    <p>Bootstrap
+Bootstrap is a popular CSS framework of prewritten stylesheets designed to help you build webpages faster.
+WHY USE IT?
+Bootstrap offers solutions to common problems faced by frontend web developers. With Bootstrap, web developers can:
+•	Build complex website layouts quickly.
+•	Design layouts over a 12-column grid system.
+•	Use prewritten JavaScript for dynamic site features.
+•	Create device-specific layouts (desktop, tablet or mobile).
+•	Create layouts that work on a variety of web browsers.
+
+<p>GETTING STARTED WITH BOOTSTRAP</p>
+<p>Here are a few different ways to use Bootstrap:</p>
+<p>LINK TO A CDN</p>
+<p>CDNs, or content delivery networks, are code files hosted on the web that you can include in your project. Using a CDN is the fastest way to get set up with Bootstrap.
+Find a CDN for Bootstrap. MaxCDN hosts the latest version:</p>
+
+<img src="C:/Users/mdevadoss/workspace/BootstrapPro/image/cdnimage.PNG" class="mx-auto d-block" style="width:70%"> 
+
+<p>Later, we will implement Bootstrap features that depend on Bootstrap JavaScript as well as jQuery, so add them to the head element now. Add two script tags below the link tag:
+
+</p>
+  </div>
+</div>
+  
+  
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myDIV *").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+<body>
+</body>

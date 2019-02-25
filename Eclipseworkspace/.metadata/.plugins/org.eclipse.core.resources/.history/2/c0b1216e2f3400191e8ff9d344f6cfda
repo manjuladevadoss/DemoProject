@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<h2>Transport 2.0</h2>
+<table width="100%">
+<tr>
+ <td>  
+   <h1>Incident Record</h1>
+   <iframe src="C:/Users/mdevadoss/workspace/DemoPro/html/incidentTbl.html"  width="600" height="300"></iframe>  
+ </td>
+	<td>
+	 <h1>Work Order</h1>
+	<iframe src="C:/Users/mdevadoss/workspace/DemoPro/html/columchart.html"  width="200" height="100"></iframe>  
+  <iframe src="C:/Users/mdevadoss/workspace/DemoPro/html/workOrderTbl.html"  width="400" height="200"></iframe>
+  </td>
+</tr>
+<tr>
+	<td>  
+    <p>Technical Alarms</p>
+</td>
+	<td>  
+    <p>Environmental Monitoring List</p>
+ </td>
+</tr>
+</table>
+
+
+</body>
+</html>

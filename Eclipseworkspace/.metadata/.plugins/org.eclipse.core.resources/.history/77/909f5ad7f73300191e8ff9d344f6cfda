@@ -1,0 +1,26 @@
+<!doctype html>
+<html >
+  <head>
+    <script  type="text/javascript"  src="C:/Users/mdevadoss/workspace/DemoPro/js/angular.min.js"></script>
+    <script  type="text/javascript"  src="C:/Users/mdevadoss/workspace/DemoPro/js/incidentRecord.js"></script>
+    <script  type="text/javascript"  src="C:/Users/mdevadoss/workspace/DemoPro/js/incidentJSON.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  -->   
+  </head>
+  <body>
+   <div ng-app="ltaApp" ng-controller="ltaController">
+     <form ng-submit="addform()">
+      <label>Name:</label>
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <input type="text" ng-model="place" placeholder="Enter a place">
+      <input class="btn-primary" type="submit" value="add">
+      </form>
+      <hr>
+      <h1>Hello11 {{yourName}}!</h1>
+      <h1>Hello {{place}}</h1>
+      <h1>Hello {{getvalue}}</h1>
+[ To view Indicent Record <a href="" ng-click="displayInciRecord()">Click Here</a> ]
+        
+        Display Incident    
+    </div>
+  </body>
+</html>

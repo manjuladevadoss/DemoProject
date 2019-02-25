@@ -1,0 +1,27 @@
+angular.module('ltaApp', [])
+  .controller('ltaController', function($scope) {
+
+	  $scope.yourname = "shiva";
+	  $scope.addform = function() {
+    	alert("abv");
+    	$scope.getvalue = $scope.yourName + ' ' +  $scope.place ;
+    	alert($scope.getvalue);
+    };
+ 
+    
+    //Display Incident record using JSON Data
+    $scope.incidentRec = [
+    	{irid: "236344", type: "Accident", state: "confirmed", zone: "zone1", roadname: "TPE", lanes:"1 2 3"}
+    ];
+    $scope.orderByMe = function(incident) {
+        $scope.myOrderBy = incident;
+    }
+
+    
+  });
+
+/*
+var app = angular.module('myApp', []);
+app.controller('formCtrl', function($scope) {
+    $scope.firstname = "John";
+});*/

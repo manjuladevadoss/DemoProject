@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 43%;
+  padding: 30px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 25px 30px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h2>Transport 2.0</h2>
+
+<br>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+  <p>Incident Record</p>
+  <embed type="text/html" src="C:/Users/mdevadoss/workspace/DemoPro/html/incidentDisplayTbl.html">  
+  </div>
+  <div class="column" style="background-color:#bbb;">
+  <p>Work Order</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#ccc;">
+    <p>Technical Alarms</p>
+  </div>
+  <div class="column" style="background-color:#ddd;">
+    <p>Environmental Monitoring List</p>
+  </div>
+
+</div>
+
+
+<table>
+<tr>
+	<td>  <div class="column" style="background-color:#aaa;">
+  <p>Incident Record</p>
+  <embed type="text/html" src="C:/Users/mdevadoss/workspace/DemoPro/html/incidentDisplayTbl.html">  
+  </div></td>
+	<td>  <div class="column" style="background-color:#bbb;">
+  <p>Work Order</p>
+  </div></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+</tr>
+</table>
+
+
+</body>
+</html>

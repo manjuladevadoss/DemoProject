@@ -1,0 +1,25 @@
+.bs-example{
+    	margin: 20px;
+    }
+body {
+  background: #555;
+}
+
+.content {
+  max-width: 500px;
+  margin: auto;
+  background: #202B53;
+  padding: 10px;
+  margin-top: 20%;
+}
+.btnClass{
+backcolor: #283D76;
+}
+h2 {
+  color: white;
+  font-family: Roboto, Helvetica, sans-serif;
+}
+h4 {
+  color: white;
+  font-family: Roboto, Helvetica, sans-serif;
+}

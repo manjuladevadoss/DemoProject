@@ -1,0 +1,59 @@
+<!doctype html>
+<html >
+  <head>
+    <script  type="text/javascript"  src="C:/Users/mdevadoss/workspace/DemoPro/js/angular.min.js"></script>
+    <script  type="text/javascript"  src="C:/Users/mdevadoss/workspace/DemoPro/js/incidentRecord.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+ 
+  </head>
+  <body>
+   <div ng-app="ltaApp" ng-controller="ltaController">
+    <h1>Work Order</h1>
+    <div align="right" > Search: <input type="text" class="form-control" placeholder="Search" ng-model="searchIncident"></div>
+    <div style="overflow-x:auto;">
+     <table border="1" width="50%">
+		<tr>
+			<th> <a href="#" ng-click="sortType = 'date'; sortReverse = !sortReverse"> Date </a></th>
+			<th> <a href="#" ng-click="sortType = 'wonum'; sortReverse = !sortReverse"> Wonum </a></th>
+			<th> <a href="#" ng-click="sortType = 'descri'; sortReverse = !sortReverse"> Description </a></th>
+			<th> <a href="#" ng-click="sortType = 'status'; sortReverse = !sortReverse"> Status </a></th>
+			<th> <a href="#" ng-click="sortType = 'zone'; sortReverse = !sortReverse"> Zone</a></th>
+		</tr>
+			<tr ng-repeat="workOrder in workOrderJson | orderBy:sortType:sortReverse | filter:searchIncident">
+				<td>{{workOrder.date}}</td>
+				<td>{{workOrder.wonum}}</td>
+				<td>{{workOrder.descri}}</td>
+				<td>{{workOrder.status}}</td>
+				<td>{{workOrder.zone}}</td>
+			</tr>
+	</table>     
+   </div>
+    </div>
+    
+ 
+
+
+
+
+    <!-- 
+        <embed type="text/html" src="C:/Users/mdevadoss/workspace/DemoPro/html/incidentDisplay.html">  
+    -->
+  </body>
+</html>
+

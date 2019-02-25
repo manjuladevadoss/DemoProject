@@ -1,0 +1,43 @@
+<!doctype html>
+<html >
+  <head>
+    <script  type="text/javascript"  src="C:/Users/mdevadoss/workspace/DemoPro/js/angular.min.js"></script>
+    <script  type="text/javascript"  src="C:/Users/mdevadoss/workspace/DemoPro/js/incidentRecord.js"></script>
+    <!--  <script  type="text/javascript"  src="C:/Users/mdevadoss/workspace/DemoPro/js/incidentJSON.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  -->   
+  </head>
+  <body>
+   <div ng-app="ltaApp" ng-controller="ltaController">
+      	    <h1>Incident Record </h1>
+      	<ul>
+            <li ng-repeat="incident in incidentRec">IRID : {{ incident.irid }} , Type : {{ incident.type}},
+            State : {{ incident.state }} , zone : {{ incident.zone}},
+            roadName : {{ incident.roadname }} , Lanes : {{ incident.lanes}}
+            </li>
+        </ul> 
+        
+    <table border="1" width="100%">
+		<tr>
+			<th>IRID <div ng-click="orderByMe('irid')"> 
+			<img src="C:/Users/mdevadoss/workspace/DemoPro/image/sortimg.jpg" width="25" height="25">
+			</div></th>
+			<th ng-click="orderByMe('type')">Type</th>
+			<th ng-click="orderByMe('state')">State</th>
+			<th ng-click="orderByMe('zone')">Zone</th>
+			<th ng-click="orderByMe('roadname')">Road Name</th>
+			<th ng-click="orderByMe('lanes')">Lanes</th>
+		</tr>
+			<tr ng-repeat="incident in incidentRec | orderBy:myOrderBy && !sortRev">
+				<td>{{incident.irid}}</td>
+				<td>{{incident.type}}</td>
+				<td>{{incident.state}}</td>
+				<td>{{incident.zone}}</td>
+				<td>{{incident.roadname}}</td>
+				<td>{{incident.lanes}}</td>
+			</tr>
+	</table> 
+        
+   
+    </div>
+  </body>
+</html>

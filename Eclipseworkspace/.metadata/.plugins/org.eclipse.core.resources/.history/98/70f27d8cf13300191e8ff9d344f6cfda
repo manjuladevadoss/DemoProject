@@ -1,0 +1,24 @@
+<!doctype html>
+<html >
+  <head>
+    <script  type="text/javascript"  src="C:/Users/mdevadoss/workspace/DemoPro/js/angular.min.js"></script>
+    <script  type="text/javascript"  src="C:/Users/mdevadoss/workspace/DemoPro/js/incidentRecord.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  </head>
+  <body>
+   <div ng-app="ltaApp" ng-controller="ltaController">
+     <form ng-submit="addform()">
+      <label>Name:mm</label>
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <input type="text" ng-model="place" placeholder="Enter a place">
+      <input class="btn-primary" type="submit" value="add">
+      </form>
+      <hr>
+      <h1>Hello11 {{yourName}}!</h1>
+      <h1>Hello {{place}}</h1>
+      Display
+      <h1>Hello {{yourName}}!</h1>
+      <h1>Hello {{place}}</h1>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+angular.module('ltaApp', [])
+  .controller('ltaController', function($scope, $http) {
+
+	  $scope.yourname = "shiva";
+	  $scope.addform = function() {
+    	alert("abv");
+    	$scope.getvalue = $scope.yourName + ' ' +  $scope.place ;
+    	alert($scope.getvalue);
+    };
+ 
+    
+    //Display Incident record using JSON Data
+    $scope.incidentRec = [
+    	{irid: "236344", type: "Accident", state: "confirmed", zone: "zone1", roadname: "TPE", lanes:"1 2 3"},
+    	{irid: "345344", type: "Road Works", state: "In Progress", zone: "zone2", roadname: "PIE", lanes:"3 2"},
+    	{irid: "782344", type: "Obstacle", state: "Notified", zone: "Zone3", roadname: "tun", lanes:"1 4 2"},
+    	{irid: "172344", type: "Accident", state: "over", zone: "Zone1", roadname: "kpe", lanes:"4 2"}
+    ];
+    $scope.orderByMe = function(incident1) {
+        $scope.myOrderBy = incident1;
+        $scope.searchIncident = "";
+        //$scope.sortRev = false;
+    }
+    $scope.sortReverse  = false;
+    
+    $http.get("C:/Users/mdevadoss/workspace/DemoPro/json/incidentData.json").then(function(response) {
+        $scope.incidentRec1 = response.data.incidentRec;
+      });
+
+    
+  });
+
+/*
+var app = angular.module('myApp', []);
+app.controller('formCtrl', function($scope) {
+    $scope.firstname = "John";
+});*/   
+   

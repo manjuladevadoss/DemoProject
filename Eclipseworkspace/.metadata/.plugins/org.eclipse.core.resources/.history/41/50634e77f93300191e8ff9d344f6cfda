@@ -1,0 +1,19 @@
+angular.module('ltaApp', [])
+  .controller('ltaController', function($scope) {
+
+	  $scope.yourname = "shiva";
+	  $scope.addform = function() {
+    	alert("abv");
+    	$scope.getvalue = $scope.yourName + ' ' +  $scope.place ;
+    	alert($scope.getvalue);
+    };
+    
+
+ 
+  });
+
+/*
+var app = angular.module('myApp', []);
+app.controller('formCtrl', function($scope) {
+    $scope.firstname = "John";
+});*/

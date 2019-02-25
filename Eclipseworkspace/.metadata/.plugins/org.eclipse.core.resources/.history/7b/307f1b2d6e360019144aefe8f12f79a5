@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>login</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <link rel="stylesheet" href="bootstrap.min.css">
+	 <link rel="stylesheet" href="demo.css">
+ 	 <script src="bootstrap.min.js"></script>
+  	 <script src="jquery.js"></script> 
+<style type="text/css">
+
+.content {
+  max-width: 500px;
+  margin: auto;
+  background: #202B53;
+  padding: 10px;
+  margin-top: 20%;
+}
+ 
+</style>
+
+</head>
+<body>
+<h3>iTransport 2.0</h3>
+Right Click
+    <div id="context-menu" style="display:none"> 
+  <ul class="dropdown-menu">
+    <li><a href="#">Action 1</a></li>
+    <li><a href="#">Action 2</a></li>
+    <li><a href="#">Action 3</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Action 4</a></li>
+    <li><a href="#">Action 5</a></li>
+    <li><a href="#">Action 6</a></li>
+  </ul>
+</div> 
+</body>
+
+<script>
+$(document).ready(function(){
+	  $('#example').contextmenu({
+	    target: "#context-menu"
+	  });
+	});
+	
+	
+//called just before showing the menu.
+before: function() {
+  return true;
+},
+
+// The identifier for the container of the menu.
+target: null,
+
+// The identifier for the actual menu.
+menuIdentifier: ".dropdown-menu"
+</script>
+</html>                            

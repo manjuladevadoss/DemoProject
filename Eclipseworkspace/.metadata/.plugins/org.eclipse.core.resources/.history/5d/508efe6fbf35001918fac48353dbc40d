@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>cc</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+ -->
+	 <link rel="stylesheet" href="bootstrap.min.css">
+	 <link rel="stylesheet" href="demo.css">
+ 	 <script src="bootstrap.min.js"></script>
+  	 <script src="jquery.js"></script> 
+<style type="text/css">
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropup-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  bottom: 50px;
+  z-index: 1;
+}
+
+.dropup-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropup-content a:hover {background-color: #ccc}
+
+.dropup:hover .dropup-content {
+  display: block;
+}
+
+.dropup:hover .dropbtn {
+  background-color: #2980B9;
+}
+
+</style>
+
+</head>
+<body>
+<h3>Common Control c2 Module</h3>
+ 
+<br><br><br><br><br><br><br><br><br>
+
+<div class="dropup">
+  <button class="dropbtn">Click to Common Controls</button>
+  <div class="dropup-content">
+    <a href="incidentTbl.jsp">Incident Record</a>
+    <a href="workorderTbl.jsp">Work Order</a>
+    <a href="techalarmTbl.jsp">Technical Alarms</a>
+	<a href="envmonTbl.jsp">Environmental monitoring list</a>
+  </div>
+</div>
+
+
+</body>
+
+
+</html>                            

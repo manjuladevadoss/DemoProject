@@ -1,0 +1,60 @@
+<!doctype html>
+<html >
+  <head>
+    <script  type="text/javascript"  src="C:/Users/mdevadoss/workspace/DemoPro/js/angular.min.js"></script>
+    <script  type="text/javascript"  src="C:/Users/mdevadoss/workspace/DemoPro/js/incidentRecord.js"></script>
+ <!--    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  -->
+
+  <link rel="stylesheet" href="C:/Users/mdevadoss/workspace/BootstrapPro/bootstrap-4.3.0-dist/css/bootstrap.min.css">
+  <script src="C:/Users/mdevadoss/workspace/BootstrapPro/bootstrap-4.3.0-dist/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+ 
+  </head>
+  <body>
+   <div ng-app="ltaApp" ng-controller="ltaController">
+    <h1>Incident Record Only Ascending order using OrderBy()</h1>
+    <table border="1" width="100%">
+		<tr>
+			<th ng-click="orderByMe('irid')">IRID</th>
+			<th ng-click="orderByMe('type')">Type</th>
+			<th ng-click="orderByMe('state')">State</th>
+			<th ng-click="orderByMe('zone')">Zone</th>
+			<th ng-click="orderByMe('roadname')">Road Name</th>
+			<th ng-click="orderByMe('lanes')">Lanes</th>
+		</tr>
+			<tr ng-repeat="incident in incidentRec | orderBy:myOrderBy">
+				<td>{{incident.irid}}</td>
+				<td>{{incident.type}}</td>
+				<td>{{incident.state}}</td>
+				<td>{{incident.zone}}</td>
+				<td>{{incident.roadname}}</td>
+				<td>{{incident.lanes}}</td>
+			</tr>
+	</table> 
+    
+    <h1>Incident Record Only Ascending and Descending order using orderBy() with 2 argument....</h1>
+    
+    Search: <input type="text" class="form-control" placeholder="Search" ng-model="searchIncident">
+     <table border="1" width="100%">
+		<tr>
+			<th> <a href="#" ng-click="sortType = 'irid'; sortReverse = !sortReverse"> IRID </a></th>
+			<th> <a href="#" ng-click="sortType = 'type'; sortReverse = !sortReverse"> Type </a></th>
+			<th> <a href="#" ng-click="sortType = 'state'; sortReverse = !sortReverse"> State </a></th>
+			<th> <a href="#" ng-click="sortType = 'zone'; sortReverse = !sortReverse"> Zone </a></th>
+			<th> <a href="#" ng-click="sortType = 'roadname'; sortReverse = !sortReverse"> Road Name </a></th>
+			<th> <a href="#" ng-click="sortType = 'lanes'; sortReverse = !sortReverse"> Lanes </a></th>
+		</tr>
+			<tr ng-repeat="incident in incidentRec | orderBy:sortType:sortReverse | filter:searchIncident">
+				<td>{{incident.irid}}</td>
+				<td>{{incident.type}}</td>
+				<td>{{incident.state}}</td>
+				<td>{{incident.zone}}</td>
+				<td>{{incident.roadname}}</td>
+				<td>{{incident.lanes}}</td>
+			</tr>
+	</table>     
+   
+    </div>
+  </body>
+</html>

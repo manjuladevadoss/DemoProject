@@ -1,0 +1,20 @@
+<!doctype html>
+<html >
+  <head>
+    <script  type="text/javascript"  src="C:/Users/mdevadoss/workspace/DemoPro/js/angular.min.js"></script>
+    <script  type="text/javascript"  src="C:/Users/mdevadoss/workspace/DemoPro/js/incidentRecord.js"></script>
+    <script  type="text/javascript"  src="C:/Users/mdevadoss/workspace/DemoPro/js/incidentJSON.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  -->   
+  </head>
+  <body>
+   <div ng-app="ltaApp" ng-controller="ltaController">
+      	    <h1>Incident Record </h1>
+      	<ul>
+            <li ng-repeat="incident in incidentRec">IRID : {{ incident.irid }} , Type : {{ incident.type}}
+            </li>
+        </ul>  
+        
+   
+    </div>
+  </body>
+</html>

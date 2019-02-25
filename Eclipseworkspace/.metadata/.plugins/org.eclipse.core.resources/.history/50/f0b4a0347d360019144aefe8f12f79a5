@@ -1,0 +1,32 @@
+<!doctype html>
+<html >
+<title>incident Record</title>
+  <head>
+    <link rel="stylesheet" href="bootstrap.min.css">
+	 <link rel="stylesheet" href="demo.css">
+	 <link rel="stylesheet" href="dropdownstyle.css">
+ 	 <script src="bootstrap.min.js"></script>
+  	 <script src="angular.min.js"></script>
+  	 <script type="text/javascript"  src="democontroller.js"></script> 
+  	 <script type="text/javascript"  src="jquery.js"></script> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+ 
+  </head>
+  <body>
+  <h3>iTransport 2.0</h3>
+      <h5>Incident Record </h5>
+   <div ng-app="ltaApp" ng-controller="ltaController">
+   Fill in the detail of your IR.
+    <form>
+    <input type="text" size="35" placeholder="Search" ng-model="searchIncident"> 
+    <input type="button" ng-click="reset()" value="Reset" />
+   </form>
+       
+    </div>
+    
+  </body>
+</html>
+
